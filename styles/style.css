@@ -14,6 +14,7 @@
   --input-bg: #FAFAFA;
   --input-text: #B3B3B3;
   --tertiary-color: #161E54;
+  --border-gray: #dfdede;
 }
 
 body {
@@ -42,7 +43,7 @@ header {
   justify-content: center;
   align-items: center;
   padding-inline: 5rem;
-  border-bottom: 1px solid var(--input-text);
+  border-bottom: 1px solid var(--border-gray);
   position: relative;
 }
 header .menu-mobile {
@@ -71,9 +72,9 @@ header .header-container .search input {
   background-color: var(--input-bg);
   border-radius: 0.4rem;
   width: 100%;
-  color: var(--input-text);
+  color: rgb(39, 39, 39);
   font-weight: 400;
-  border: 0.1rem solid var(--light-grey);
+  border: 0.1rem solid var(--border-gray);
   outline: none;
 }
 header .header-container .search input::-moz-placeholder {
@@ -228,6 +229,9 @@ main .container {
 }
 main .container .content-1 {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 main .container .content-1 .title h1 {
   font-size: 2.4rem;
@@ -239,7 +243,6 @@ main .container .content-1 .cards {
   width: 100%;
   display: flex;
   gap: 1.4rem;
-  margin-top: 1.2rem;
 }
 main .container .content-1 .cards .card {
   display: flex;
@@ -281,6 +284,62 @@ main .container .content-1 .cards .card span {
   line-height: 2.4rem;
   font-weight: 400;
   color: var(--primary);
+}
+main .container .content-1 .graphics {
+  display: flex;
+  width: 100%;
+  gap: 1.6rem;
+}
+main .container .content-1 .graphics .graphic {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-gray);
+}
+main .container .content-1 .graphics .graphic .graphic-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+main .container .content-1 .graphics .graphic .graphic-text h2 {
+  color: var(--tertiary-color);
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+}
+main .container .content-1 .graphics .graphic .graphic-text strong {
+  font-size: 3.2rem;
+  color: var(--tertiary-color);
+  line-height: 2.8rem;
+  font-weight: 500;
+}
+main .container .content-1 .graphics .graphic .graphic-text .men-women {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+main .container .content-1 .graphics .graphic .graphic-text .men-women p {
+  font-size: 1.2rem;
+  color: var(--grey);
+  font-weight: 400;
+  line-height: 1.8rem;
+}
+main .container .content-1 .graphics .graphic .graphic-line {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .container .content-1 .graphics .graphic .graphic-line span {
+  background-color: #FFEFE7;
+  color: #303030;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+  padding: 0 1rem;
+  border-radius: 0.4rem;
 }
 
 @media screen and (min-width: 1000px) {

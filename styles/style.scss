@@ -16,6 +16,7 @@
   --input-bg: #FAFAFA;
   --input-text: #B3B3B3;
   --tertiary-color: #161E54;
+  --border-gray: #dfdede;
 }
 
 body {
@@ -51,7 +52,7 @@ header {
   justify-content: center;
   align-items: center;
   padding-inline: 5rem;
-  border-bottom: 1px solid var(--input-text);
+  border-bottom: 1px solid var(--border-gray);
   position: relative;
 
   .menu-mobile {
@@ -81,10 +82,10 @@ header {
         background-color: var(--input-bg);
         border-radius: .4rem;
         width: 100%;
-        color: var(--input-text);
+        color: rgb(39, 39, 39);
         font-weight: 400;
         
-        border: .1rem solid var(--light-grey);
+        border: .1rem solid var(--border-gray);
         outline: none;
         &::placeholder {
           color: var(--light-grey);;
@@ -257,8 +258,6 @@ header {
     }
   }
 
- 
-  
 }
 
 main {
@@ -270,6 +269,9 @@ main {
 
     .content-1 {
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
       .title {
 
         h1 {
@@ -284,7 +286,7 @@ main {
         width: 100%;
         display: flex;
         gap: 1.4rem;
-        margin-top: 1.2rem;
+
        
         .card {
           display: flex;
@@ -329,6 +331,70 @@ main {
             line-height: 2.4rem;
             font-weight: 400;
             color: var(--primary)
+          }
+        }
+      }
+
+      .graphics {
+        display: flex;
+        width: 100%;
+        gap: 1.6rem;
+        
+        .graphic {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          padding: 2rem;
+          border-radius: 1rem;
+          border: 1px solid var(--border-gray);
+          .graphic-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2.2rem;
+            
+
+            h2 {
+              color: var(--tertiary-color);
+              font-size: 1.6rem;
+              line-height: 2.4rem;
+              font-weight: 500;
+            }
+
+            strong {
+              font-size: 3.2rem;
+              color: var(--tertiary-color);
+              line-height: 2.8rem;
+              font-weight: 500;
+            }
+
+            .men-women {
+              display: flex;
+              flex-direction: column;
+              gap: .4rem;
+              p {
+                font-size: 1.2rem;
+                color: var(--grey);
+                font-weight: 400;
+                line-height: 1.8rem;
+              }
+            }
+          }
+
+          .graphic-line {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            span {
+              background-color: #FFEFE7;
+              color: #303030;
+              font-size: 1.2rem;
+              line-height: 2.4rem;
+              font-weight: 500;
+              padding: .0 1rem;
+              border-radius: .4rem;
+            }
           }
         }
       }
